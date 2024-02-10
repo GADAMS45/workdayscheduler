@@ -8,7 +8,7 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
 
- 
+  var timeLabels = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
   var hours = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 
 
@@ -26,6 +26,20 @@ $(function () {
       appliedClass = "future";
     }
 
+
+    // loading saved text
+    var savedText = localStorage.getItem(`hour-${hours[i]}`) || ""
+  
+    $("#time-blocks").append(
+      `<div id="hour-${hours[i]}" class="row time-block ${appliedClass}">
+          <div class="col-2 col-md-1 hour text-center py-3">${timeLabels[i]}</div>
+          <textarea class="col-8 col-md-10 description" rows="3"> ${savedText}</textarea>
+          <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+            <i class="fas fa-save" aria-hidden="true"></i>
+          </button>
+      </div>`
+    )
+
     
   }
 
@@ -37,6 +51,10 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
+
+  var currentDate = dayjs().format('MM/DD/YYYY') // 
+  
+  $("#currentDay").text(currentDate)
   
 
 
