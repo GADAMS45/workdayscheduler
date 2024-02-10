@@ -16,9 +16,9 @@ Utilize the link and download the files and it will allow you to run the site.
 
 
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+    
+![alt text](assets/images/screenshot.png)
+
 
 ## Credits
 
