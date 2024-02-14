@@ -17,7 +17,7 @@ Utilize the link and download the files and it will allow you to run the site.
 
 
     
-![alt text](assets/images/screenshot.png)
+![screenshot1](.Assets/screenshot.png)
 
 
 ## Credits
